@@ -200,8 +200,8 @@ def model_output_generator(word_numbers, words, ham_wf, ham_cp, spam_wf, spam_cp
 
 
 def modelFileBuilder(model_output):
-    model_file = open("model.txt", 'w')
-    model_file.write(model_output)
+    with open("model.txt", 'w') as model_file:
+        model_file.write(model_output)
 
 
 "*** Returns the name of all emails (test files) ***"
