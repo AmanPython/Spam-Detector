@@ -200,8 +200,8 @@ def model_output_generator(word_numbers, words, ham_wf, ham_cp, spam_wf, spam_cp
 
 
 def modelFileBuilder(model_output):
-    model_file = open("model.txt", 'w')
-    model_file.write(model_output)
+    with open("model.txt", 'w') as model_file:
+        model_file.write(model_output)
 
 
 "*** Returns the name of all emails (test files) ***"
@@ -290,8 +290,8 @@ def result_output_generator(fileNumbers, fileNames, predictedLabels, hamScores, 
 
 
 def resultFileBuilder(result_output):
-    model_file = open("result.txt", 'w')
-    model_file.write(result_output)
+    with open("result.txt", 'w') as model_file:
+        model_file.write(result_output)
 
 
 "*** Calculates Precision (spam class) - Formula: (True Positive / (True Positive + False Positive)) ***"
@@ -567,5 +567,5 @@ def evaluation_output_generator(evaluation_result_output, spam_confusionMatrix_o
 
 
 def evaluationFileBuilder(evaluation_output):
-    model_file = open("evaluation.txt", 'w')
-    model_file.write(evaluation_output)
+    with open("evaluation.txt", 'w') as model_file:
+        model_file.write(evaluation_output)
